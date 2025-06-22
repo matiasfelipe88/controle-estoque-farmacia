@@ -46,3 +46,20 @@ CREATE TABLE movimentacao (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE funcionario (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
+    telefone VARCHAR(20),
+    email VARCHAR(100),
+    endereco VARCHAR(150),
+    cargo VARCHAR(50) NOT NULL,
+    data_admissao DATE NOT NULL,
+    salario DECIMAL(10,2),
+    id_usuario INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_usuario) REFERENCES usuario (id)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE
+);
