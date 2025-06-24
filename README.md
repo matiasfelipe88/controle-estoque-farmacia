@@ -71,11 +71,11 @@ estoque-farmacia/
 
 ### Página não carrega
 - Verifique se o XAMPP está rodando
-- Confirme se a pasta está em `htdocs`
+- Confirme se a pasta está em "htdocs"
 
 ### Erro de banco de dados
 - Verifique se o MySQL está ativo
-- Confirme se o banco `farmacia_estoque` existe
+- Confirme se o banco "farmacia_estoque" existe
 - Teste a conexão em: http://localhost/estoque-farmacia/public/test_db.php
 
 ### Não consegue adicionar categorias/fornecedores
@@ -87,12 +87,12 @@ estoque-farmacia/
 
 ## Tecnologias usadas
 
-- **PHP**: Linguagem do servidor
-- **MySQL**: Banco de dados
-- **Bootstrap**: Estilo das páginas
-- **HTML/CSS**: Estrutura e aparência
+PHP: Linguagem do servidor
+MySQL: Banco de dados
+Bootstrap: Estilo das páginas     //Puxado no final de varias paginas pelo script
+HTML/CSS: Estrutura e aparência
 
-## Segurança
+## Questoes de Segurança
 
 - Senhas são criptografadas
 - Controle de sessão
@@ -101,12 +101,12 @@ estoque-farmacia/
 
 ## Personalizar
 
-### Mudar o logo
-- Substitua `assets/LOGO_farmacia.png` pelo seu logo
-- Substitua `assets/LOGO_farmacia.ico` pelo seu ícone
+### Alterando a logo do site
+- Substitua assets/LOGO_farmacia.png pelo seu logo
+- Substitua assets/LOGO_farmacia.ico pelo seu ícone
 
-### Mudar cores
-- Edite os arquivos CSS nas pastas `assets/` e `app/views/`
+### Para mudar as cores
+- Edite os arquivos CSS nas pastas assets/ e app/views/
 
 ## Dúvidas?
 
