@@ -30,6 +30,13 @@ Um sistema simples para gerenciar o estoque de uma farmácia. Feito com PHP e My
   define('DB_USER', 'root');
   define('DB_PASS', 'root');
   ```
+<>
+  Observacoes: As informacoes a cima devem corresponder ao servidor local xampp,
+  quais podem ser identificadas nas configuracoes do MySQL do xampp.
+  La poderam ser alterados os dados.
+<>
+
+
 
 ### 4. Adicionar as imagens
 - Coloque `LOGO_farmacia.png` na pasta `assets/`
