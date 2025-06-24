@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Estoque - Farmácia</title>
+    <link rel="icon" type="image/x-icon" href="../assets/LOGO_farmacia.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -11,7 +12,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.php?controller=produto&action=index">
-                <i class="fas fa-pills me-2"></i>Farmácia - Estoque
+                <img src="../assets/LOGO_farmacia.png" alt="Logo Farmácia" style="height: 40px; margin-right: 10px;">
+                Farmácia - Estoque
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

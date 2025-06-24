@@ -30,13 +30,6 @@ Um sistema simples para gerenciar o estoque de uma farmácia. Feito com PHP e My
   define('DB_USER', 'root');
   define('DB_PASS', 'root');
   ```
-<>
-  Observacoes: As informacoes a cima devem corresponder ao servidor local xampp,
-  quais podem ser identificadas nas configuracoes do MySQL do xampp.
-  La poderam ser alterados os dados.
-<>
-
-
 
 ### 4. Adicionar as imagens
 - Coloque `LOGO_farmacia.png` na pasta `assets/`
@@ -78,11 +71,11 @@ estoque-farmacia/
 
 ### Página não carrega
 - Verifique se o XAMPP está rodando
-- Confirme se a pasta está em "htdocs"
+- Confirme se a pasta está em `htdocs`
 
 ### Erro de banco de dados
 - Verifique se o MySQL está ativo
-- Confirme se o banco "farmacia_estoque" existe
+- Confirme se o banco `farmacia_estoque` existe
 - Teste a conexão em: http://localhost/estoque-farmacia/public/test_db.php
 
 ### Não consegue adicionar categorias/fornecedores
@@ -94,12 +87,12 @@ estoque-farmacia/
 
 ## Tecnologias usadas
 
-PHP: Linguagem do servidor
-MySQL: Banco de dados
-Bootstrap: Estilo das páginas     //Puxado no final de varias paginas pelo script
-HTML/CSS: Estrutura e aparência
+- **PHP**: Linguagem do servidor
+- **MySQL**: Banco de dados
+- **Bootstrap**: Estilo das páginas
+- **HTML/CSS**: Estrutura e aparência
 
-## Questoes de Segurança
+## Segurança
 
 - Senhas são criptografadas
 - Controle de sessão
@@ -108,12 +101,12 @@ HTML/CSS: Estrutura e aparência
 
 ## Personalizar
 
-### Alterando a logo do site
-- Substitua assets/LOGO_farmacia.png pelo seu logo
-- Substitua assets/LOGO_farmacia.ico pelo seu ícone
+### Mudar o logo
+- Substitua `assets/LOGO_farmacia.png` pelo seu logo
+- Substitua `assets/LOGO_farmacia.ico` pelo seu ícone
 
-### Para mudar as cores
-- Edite os arquivos CSS nas pastas assets/ e app/views/
+### Mudar cores
+- Edite os arquivos CSS nas pastas `assets/` e `app/views/`
 
 ## Dúvidas?
 
