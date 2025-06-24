@@ -1,3 +1,4 @@
+-- Usando sua excelente sugestão para criar o banco de dados de forma robusta
 CREATE DATABASE IF NOT EXISTS farmacia_estoque DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE farmacia_estoque;
 
@@ -11,19 +12,24 @@ CREATE TABLE usuarios (
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tabela Normalizada para Categorias (boa prática)
 CREATE TABLE categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL UNIQUE
+    nome VARCHAR(100) NOT NULL UNIQUE,
+    descricao TEXT
 );
 
+-- Tabela Normalizada para Fornecedores (boa prática)
 CREATE TABLE fornecedores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
     cnpj VARCHAR(18) UNIQUE,
     telefone VARCHAR(20),
-    email VARCHAR(100)
+    email VARCHAR(100),
+    endereco TEXT
 );
 
+-- Tabela de Produtos completa, com sua sugestão de 'validade' e chaves estrangeiras
 CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
@@ -38,7 +44,7 @@ CREATE TABLE produtos (
     FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id) ON DELETE SET NULL
 );
 
--- Tabela de Movimentações 
+-- Tabela de Movimentações com auditoria (id_usuario)
 CREATE TABLE movimentacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_produto INT NOT NULL,
