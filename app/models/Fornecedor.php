@@ -90,10 +90,6 @@ class Fornecedor {
 
     public function excluir($id) {
         try {
-<<<<<<< HEAD
-=======
-            // Verificar se há produtos vinculados a este fornecedor
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $queryCheck = "SELECT COUNT(*) as total FROM produtos WHERE id_fornecedor = :id";
             $stmtCheck = $this->conn->prepare($queryCheck);
             $stmtCheck->bindParam(':id', $id);

@@ -55,11 +55,7 @@
 </div>
 
 <script>
-<<<<<<< HEAD
 
-=======
-// Validar senhas em tempo real
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 document.getElementById('confirmar_senha').addEventListener('input', function() {
     const senha = document.getElementById('senha').value;
     const confirmarSenha = this.value;

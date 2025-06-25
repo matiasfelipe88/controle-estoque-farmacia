@@ -55,10 +55,6 @@ class Usuario {
 
     public function criar($dados) {
         try {
-<<<<<<< HEAD
-=======
-            // Verificar se o email já existe
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if ($this->buscarPorEmail($dados['email'])) {
                 return ['erro' => 'Este email já está cadastrado'];
             }
@@ -66,10 +62,6 @@ class Usuario {
             $query = "INSERT INTO " . $this->table . " (nome, email, senha) VALUES (:nome, :email, :senha)";
             $stmt = $this->conn->prepare($query);
 
-<<<<<<< HEAD
-=======
-            // Hash da senha
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $senhaHash = password_hash($dados['senha'], PASSWORD_DEFAULT);
 
             $stmt->bindParam(':nome', $dados['nome']);
@@ -89,10 +81,6 @@ class Usuario {
 
     public function atualizar($id, $dados) {
         try {
-<<<<<<< HEAD
-=======
-            // Verificar se o email já existe em outro usuário
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $usuarioExistente = $this->buscarPorEmail($dados['email']);
             if ($usuarioExistente && $usuarioExistente['id'] != $id) {
                 return ['erro' => 'Este email já está sendo usado por outro usuário'];
@@ -105,10 +93,6 @@ class Usuario {
                 ':email' => $dados['email']
             ];
 
-<<<<<<< HEAD
-=======
-            // Se uma nova senha foi fornecida, incluir na atualização
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if (!empty($dados['senha'])) {
                 $query .= ", senha = :senha";
                 $params[':senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
@@ -131,10 +115,6 @@ class Usuario {
 
     public function excluir($id) {
         try {
-<<<<<<< HEAD
-=======
-            // Não permitir excluir o usuário admin (id = 1)
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if ($id == 1) {
                 return ['erro' => 'Não é possível excluir o usuário administrador'];
             }

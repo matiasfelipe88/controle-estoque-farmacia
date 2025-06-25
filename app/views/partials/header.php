@@ -9,11 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
->>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
         <div class="container">
             <a class="navbar-brand" href="index.php?controller=produto&action=index">
                 <img src="../assets/LOGO_farmacia.png" alt="Logo Farmácia" style="height: 40px; margin-right: 10px;">
