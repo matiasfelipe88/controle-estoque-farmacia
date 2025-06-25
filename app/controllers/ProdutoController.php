@@ -86,6 +86,10 @@ class ProdutoController {
                 exit;
             }
 
+<<<<<<< HEAD
+=======
+            // Validações básicas
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $nome = trim($_POST['nome'] ?? '');
             $preco = floatval($_POST['preco'] ?? 0);
             $estoque = intval($_POST['estoque'] ?? 0);
@@ -133,6 +137,10 @@ class ProdutoController {
             exit;
         }
 
+<<<<<<< HEAD
+=======
+        // Buscar o produto para pegar o nome antes de excluir
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
         $produto = $this->produtoModel->buscarPorId($id);
         $nomeProduto = $produto ? $produto['nome'] : 'Produto';
 

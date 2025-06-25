@@ -17,6 +17,10 @@ class Produto {
 
     public function listarTodos() {
         try {
+<<<<<<< HEAD
+=======
+            // Fazer JOIN com categorias e fornecedores para pegar os nomes
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $query = "SELECT p.*,
                              c.nome as categoria_nome,
                              f.nome as fornecedor_nome
@@ -113,6 +117,10 @@ class Produto {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // Métodos auxiliares para buscar categorias e fornecedores
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
     public function listarCategorias() {
         try {
             $query = "SELECT * FROM categorias ORDER BY nome";

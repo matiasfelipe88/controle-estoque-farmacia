@@ -1,8 +1,13 @@
 <?php
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'farmacia_estoque');
+<<<<<<< HEAD
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
+=======
+define('DB_USER', 'Murilo'); // Seu usuário do MySQL
+define('DB_PASS', 'root');     // Sua senha do MySQL
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 
 class Database {
     private static $instance = null;

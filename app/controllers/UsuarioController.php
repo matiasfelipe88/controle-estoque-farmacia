@@ -17,12 +17,20 @@ class UsuarioController {
 
     public function store() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+<<<<<<< HEAD
 
+=======
+            // Validações
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $nome = trim($_POST['nome'] ?? '');
             $email = trim($_POST['email'] ?? '');
             $senha = $_POST['senha'] ?? '';
             $confirmarSenha = $_POST['confirmar_senha'] ?? '';
 
+<<<<<<< HEAD
+=======
+            // Validar campos obrigatórios
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if (empty($nome)) {
                 header('Location: index.php?controller=usuario&action=create&erro=Nome é obrigatório');
                 exit;
@@ -96,6 +104,10 @@ class UsuarioController {
                 exit;
             }
 
+<<<<<<< HEAD
+=======
+            // Validações
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $nome = trim($_POST['nome'] ?? '');
             $email = trim($_POST['email'] ?? '');
             $senha = $_POST['senha'] ?? '';
@@ -116,6 +128,10 @@ class UsuarioController {
                 exit;
             }
 
+<<<<<<< HEAD
+=======
+            // Se senha foi fornecida, validar
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if (!empty($senha)) {
                 if (strlen($senha) < 6) {
                     header('Location: index.php?controller=usuario&action=edit&id=' . $id . '&erro=Senha deve ter pelo menos 6 caracteres');
@@ -154,6 +170,10 @@ class UsuarioController {
             exit;
         }
 
+<<<<<<< HEAD
+=======
+        // Não permitir que o usuário exclua a si mesmo
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
         if ($id == $_SESSION['user_id']) {
             header('Location: index.php?controller=usuario&action=index&erro=Você não pode excluir sua própria conta');
             exit;

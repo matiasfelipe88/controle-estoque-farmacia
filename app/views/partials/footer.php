@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     </div>
+=======
+    </div> <!-- Fecha container do header -->
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 
     <footer class="bg-light text-center text-muted py-3 mt-5">
         <div class="container">

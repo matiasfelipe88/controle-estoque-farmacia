@@ -1,4 +1,11 @@
 <?php
+<<<<<<< HEAD
+=======
+/**
+ * Script para criar novos usuários autorizados no sistema
+ * As senhas são criptografadas usando password_hash() do PHP
+ */
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 
 require_once 'database.php';
 
@@ -18,6 +25,10 @@ class CriarUsuario {
      */
     public function criarUsuario($nome, $email, $senha) {
         try {
+<<<<<<< HEAD
+=======
+            // Validações básicas
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if (empty($nome) || empty($email) || empty($senha)) {
                 return [
                     'sucesso' => false,
@@ -25,6 +36,10 @@ class CriarUsuario {
                 ];
             }
             
+<<<<<<< HEAD
+=======
+            // Validar formato do email
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 return [
                     'sucesso' => false,
@@ -32,6 +47,10 @@ class CriarUsuario {
                 ];
             }
             
+<<<<<<< HEAD
+=======
+            // Verificar se o email já existe
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $stmt = $this->db->prepare("SELECT id FROM usuarios WHERE email = ?");
             $stmt->execute([$email]);
             
@@ -42,8 +61,15 @@ class CriarUsuario {
                 ];
             }
             
+<<<<<<< HEAD
             $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
             
+=======
+            // Criptografar a senha usando bcrypt
+            $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+            
+            // Inserir o novo usuário
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
             $stmt = $this->db->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
             $stmt->execute([$nome, $email, $senha_hash]);
             
@@ -62,11 +88,19 @@ class CriarUsuario {
     }
 }
 
+<<<<<<< HEAD
+=======
+// Interface de linha de comando para criar usuários
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 if (php_sapi_name() === 'cli') {
     echo "=== CRIADOR DE USUÁRIOS ===\n\n";
     
     $criador = new CriarUsuario();
     
+<<<<<<< HEAD
+=======
+    // Solicitar dados do usuário
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
     echo "Nome completo: ";
     $nome = trim(fgets(STDIN));
     
@@ -76,11 +110,19 @@ if (php_sapi_name() === 'cli') {
     echo "Senha: ";
     $senha = trim(fgets(STDIN));
     
+<<<<<<< HEAD
+=======
+    // Criar o usuário
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
     $resultado = $criador->criarUsuario($nome, $email, $senha);
     
     echo "\n" . $resultado['mensagem'] . "\n";
 }
 
+<<<<<<< HEAD
+=======
+// Interface web para criar usuários (quando acessado via navegador)
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
 if (php_sapi_name() !== 'cli') {
     $criador = new CriarUsuario();
     $mensagem = '';
@@ -103,7 +145,13 @@ if (php_sapi_name() !== 'cli') {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Criar Usuário - Sistema</title>
         <link rel="icon" type="image/x-icon" href="../assets/LOGO_farmacia.ico">
+<<<<<<< HEAD
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+=======
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CSS Customizado -->
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
         <link href="../assets/criar-usuario.css" rel="stylesheet">
     </head>
     <body>
@@ -149,6 +197,10 @@ if (php_sapi_name() !== 'cli') {
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Bootstrap JS -->
+>>>>>>> 86d728bb717f09bfb3cc0ef58e2af6cf3cbbba3a
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
